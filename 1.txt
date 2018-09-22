@@ -1,0 +1,25 @@
+[ configuration ]
+version = 1.0
+url = xxx
+method = 888
+
+[ universal ]
+version = 9.0
+url = xxx
+method = http
+
+[]
+
+xxxx
+
+# xxxxsdfadsfdsfadsf
+# asddfsa
+
+
+
+[ area ]
+
+xxx = xxx =kk<linan@sensetime
+user.name = linan
+user.email = linan@sensetime.com
+
