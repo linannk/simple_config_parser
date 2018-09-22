@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.5)
 project(simple_config_parser)
 
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED 1)
+
 add_library(simple_config_parser STATIC
     simple_config_parser.cpp)
 

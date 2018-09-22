@@ -29,5 +29,13 @@ ParseConfigurationFromFile(const std::string& filename);
 See test_simple_config_parser.cpp
 
 ## note
-The `ParseConfigurationFrom*` functionw will not merge two or more sections with the same name.
+The `ParseConfigurationFrom*` functions will not merge two or more sections with the same name.
+
+## How to build?
+```sh
+$ cd simple_config_parser
+$ mkdir build && cd build
+$ cmake .. && make
+$ ./test_simple_config_parser ../1.txt
+```
 
