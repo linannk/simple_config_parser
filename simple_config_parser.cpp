@@ -170,3 +170,26 @@ ParseConfigurationFromFile(const std::string& filename)
     return ParseConfigurationFromIStream(configuration_file);
 }
 
+bool SerializeConfigurationToOStream(const std::vector<std::pair<std::string, std::map<std::string, std::string>>>& config, std::ostream& os)
+{
+    for (const auto& c : config)
+    {
+        os << "[ " << c.first << " ]" << std::endl;
+        for (const auto& item : c.second)
+        {
+            os << item.first << " = " << item.second << std::endl;
+        }
+        os << std::endl;
+    }
+    return os.good();
+}
+
+bool SerializeConfigurationToFile(const std::vector<std::pair<std::string, std::map<std::string, std::string>>>& config, const std::string& filename)
+{
+    std::ofstream configuration_fs(filename);
+    if (!configuration_fs.is_open()) {
+        return false;
+    }
+    return SerializeConfigurationToOStream(config, configuration_fs);
+}
+

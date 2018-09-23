@@ -36,5 +36,8 @@ ParseConfigurationFromIStream(std::istream& is);
 std::vector<std::pair<std::string, std::map<std::string, std::string>>>
 ParseConfigurationFromFile(const std::string& filename);
 
+bool SerializeConfigurationToOStream(const std::vector<std::pair<std::string, std::map<std::string, std::string>>>& config, std::ostream& os);
+bool SerializeConfigurationToFile(const std::vector<std::pair<std::string, std::map<std::string, std::string>>>& config, const std::string& filename);
+
 #endif // _LN_SIMPLE_CONFIG_PARSER_H_
 

@@ -27,5 +27,7 @@ static void dump_file(const std::string& filename)
         }
         std::cout << "###### END ######" << std::endl;
     }
+
+    SerializeConfigurationToFile(config, "tmp.txt");
 }
 
