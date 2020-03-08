@@ -142,7 +142,7 @@ ParseConfigurationFromIStream(std::istream& is)
             if (name.empty()) {
                 continue;
             }
-            if (tmp_kv.empty()) {
+            if (tmp_name.empty()) {
                 tmp_name = name;
             }
             else {
@@ -157,7 +157,7 @@ ParseConfigurationFromIStream(std::istream& is)
             tmp_kv.emplace(key, value);
         }
     }
-    if (!tmp_name.empty() && !tmp_kv.empty()) {
+    if (!tmp_name.empty()/* && !tmp_kv.empty()*/) {
         result.push_back({tmp_name, tmp_kv});
     }
     return result;
